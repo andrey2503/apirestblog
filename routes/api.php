@@ -21,3 +21,4 @@ Route::get('uicomponentes','UIController@index');
 Route::get('post','BlogController@post');
 Route::get('comentarios/{id}','ComentarioController@index');
 Route::post('comentario','ComentarioController@agregarComentario');
+Route::get('morepost/{id}','BlogController@morepost');

@@ -104,6 +104,9 @@ class BlogController extends Controller
     }
 
     public function post(){
-        return Blog::all();
+        return Blog::orderBy('created_at', 'desc')->take(3)->get();
+    }
+    public function morepost($id){
+        return Blog::where('id','<',$id)->orderBy('created_at', 'desc')->take(4)->get();        
     }
 }

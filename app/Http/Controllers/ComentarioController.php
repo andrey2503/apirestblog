@@ -15,8 +15,9 @@ class ComentarioController extends Controller
     public function index($id)
     {
         //
-        return Comentario::all()->where('fk_post','=',$id)->all();
-        
+        // return Comentario::all()->where('fk_post','=',$id)->all();
+        return Comentario::where('fk_post','=',$id)->get();        
+        // return Comentario::all();
     }
 
     /**
